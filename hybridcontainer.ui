@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>IdcHybridContainerClass</class>
+ <widget class="QMainWindow" name="IdcHybridContainerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>IdcHybridContainer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="idchybridcontainer.qrc">
+    <normaloff>:/ups_smart_client.ico</normaloff>:/ups_smart_client.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionRead">
+   <property name="text">
+    <string>Read</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="idchybridcontainer.qrc"/>
+ </resources>
+ <connections/>
+</ui>

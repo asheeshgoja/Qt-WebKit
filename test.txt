@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+
+<script type="text/javascript" src="json2.js"></script>
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript" src="jquery.json2xml.js"></script>
+
+
+<script type="text/javascript">
+
+    function PackageInfoDataSet() {
+        this.TrackingNo = "";
+        this.ShipperNumber = "";
+        this.Weight = 0.0;
+    }
+
+    function onClick(type) {
+
+
+//         $.ajax({
+//             contentType: 'text/xml',
+//             Accept: 'text/json, application/json',
+//             url: $("#url")[0].value,
+//             success: function (data) {
+//        		$("#result").text(data.ShipperNumber);
+//            }
+//        });
+
+//        return;
+
+        //var packageInfoDataSet = new PackageInfoDataSet();
+        //packageInfoDataSet.TrackingNo = $("#TrackingNo").text();
+
+    	var ajaxObj = null;
+    	
+    	if( window.ActiveXObject)
+        	ajaxObj = new ActiveXObject("Microsoft.XMLHTTP");
+    	else
+        	ajaxObj = new XMLHttpRequest();
+
+     ajaxObj.onreadystatechange = function () {
+         if (ajaxObj.readyState == 4) {
+             //var o = JSON.parse(ajaxObj.responseText);
+             //document.getElementById("result").value = ajaxObj.responseText;
+             alert(ajaxObj.responseText);
+             $("#raw_result").text(ajaxObj.responseText);
+             $("#formatted_result").html(ajaxObj.responseText);
+         }
+     }
+
+         try {
+             netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+         }catch (e) {
+             //alert("Permission UniversalBrowserRead denied.");
+         }
+
+
+
+         var url = $("#url")[0].value;
+
+         ajaxObj.open("GET", url, true);
+
+        //ajaxObj.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+         //ajaxObj.setRequestHeader('X-Prototype-Version', "1.6.0.2");
+        if(type === "xml")
+            ajaxObj.setRequestHeader('Accept', 'text/xml, application/xml');
+        else if (type === "html")
+            ajaxObj.setRequestHeader('Accept', 'text/html');
+        else
+            ajaxObj.setRequestHeader('Accept', 'text/json, application/json');
+
+        //ajaxObj.setRequestHeader('Cache-Control', 'no-cache' );
+//        ajaxObj.setRequestHeader('Access-Control', 'allow <*>');
+//        ajaxObj.setRequestHeader('Access-Control-Origin', '*');
+//        ajaxObj.setRequestHeader('Access-Control-Allow-Credentials', 'true');
+
+       ajaxObj.send();
+    }
+    
+</script>
+
+</head>
+
+<body>
+<b>URL:</b>
+
+<input type="text" id="url" value="http://localhost:2222/Opsys/Idc/Shipment/1Z8A5E940342103961" style="width:600px" /><br /><br />
+<!--<textarea id="TrackingNo">Enter Tracking No</textarea>-->
+<button onclick="return onClick('json');">Call Server (MediaType:JSON)</button>
+<button onclick="return onClick('xml');">Call Server (MediaType:XML)</button>
+<button onclick="return onClick('html');">Call Server (MediaType:HTML)</button><br /><br /><br />
+
+
+<b>Raw Results</b>
+<div id="raw_result" >Waiting for input..</div><br />
+
+<b>Formatted Results</b>
+<div id="formatted_result" >Waiting for input..</div>
+</body>
+
+</html>

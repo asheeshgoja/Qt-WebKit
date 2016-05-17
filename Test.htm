@@ -1,0 +1,40 @@
+<html>
+<head>
+   <script language="javascript">
+       function openFile() {
+           JavaScriptExtension.openFile();
+       }
+
+       function printFile() {
+           JavaScriptExtension.printFile();
+       }
+
+       function activateScanner() {
+           JavaScriptExtension.activateScanner();
+       }
+
+       function releaseScanner() {
+           JavaScriptExtension.releaseScanner();
+       }
+
+   </script>
+
+</head>
+
+<body>
+
+<form method="post" action="self" >
+
+Tracking ID :<input id="tracking_id"   type="text" onchange="return onScan(this.value);" /> <br />
+Data :<input type="text" id="data"/><br />
+<input type="button" onclick="openFile()" value="OpenFile" />
+<input type="button" onclick="printFile()"  value="PrintFile" />
+<input type="button" onclick="activateScanner()"  value="ActivateScanner" />
+<input type="button" onclick="releaseScanner()"  value="ReleaseScanner" />
+<label id="ScannerStatus" style="background-color:Yellow" >Scanner Status</label><br />
+<textarea id="contents" cols="100" rows="20"></textarea>
+
+</form>
+
+</body>
+</html>

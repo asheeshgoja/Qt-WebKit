@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/IdcReferenceArchitcture/!svn/ver/47/trunk/IdcHybridContainer/SerialPort
+END
+PortListener.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/IdcReferenceArchitcture/!svn/ver/47/trunk/IdcHybridContainer/SerialPort/PortListener.h
+END
+qextserialbase.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/IdcReferenceArchitcture/!svn/ver/47/trunk/IdcHybridContainer/SerialPort/qextserialbase.h
+END
+win_qextserialport.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/IdcReferenceArchitcture/!svn/ver/48/trunk/IdcHybridContainer/SerialPort/win_qextserialport.cpp
+END
+qextserialport.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/IdcReferenceArchitcture/!svn/ver/48/trunk/IdcHybridContainer/SerialPort/qextserialport.cpp
+END
+win_qextserialport.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/IdcReferenceArchitcture/!svn/ver/49/trunk/IdcHybridContainer/SerialPort/win_qextserialport.h
+END
+PortListener.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/IdcReferenceArchitcture/!svn/ver/47/trunk/IdcHybridContainer/SerialPort/PortListener.cpp
+END
+qextserialport.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/IdcReferenceArchitcture/!svn/ver/47/trunk/IdcHybridContainer/SerialPort/qextserialport.h
+END
+qextserialbase.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/IdcReferenceArchitcture/!svn/ver/47/trunk/IdcHybridContainer/SerialPort/qextserialbase.cpp
+END
